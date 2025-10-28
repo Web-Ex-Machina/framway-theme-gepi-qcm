@@ -1,0 +1,17 @@
+.headerFW{ 
+  .account-toggle{font-size: 2em; color: color(blueLogo); opacity: 0.6; transition: opacity 0.4s; cursor: pointer; margin: 0 0.5em; display: flex;align-items: center;
+    &.active,
+    &:hover{opacity: 1;}
+  }
+  .mod_login{position: absolute; top: 80%; right: 0; transform: translate3d(110%,0,0); transition: transform 0.4s; background: body(background);box-shadow: 5px 5px 20px; padding: $spacing; font-size: 0.8em; z-index: 1;
+    &.active{transform: translate3d(0,0,0);}
+    & input{margin-bottom: $spacing/2;
+      &.submit{margin-bottom: 0;}
+    }
+  }
+}
+
+#nav_entreprise ul{list-style: none; padding:0; margin:0;
+  & li{display: inline-block;}
+  & a{@include btn(); width: 100%; white-space: nowrap;}
+}
