@@ -8,6 +8,8 @@ module.exports = {
 		'orange':       '#DC6053',
 	},
 
+	'griditem-minwidth': '28ch',
+
 	'primary': 'colors(blueLogo)',
 	'secondary': 'adjust-color(primary,$hue: 180deg)',
 

@@ -12,6 +12,16 @@ $(function(){
 	$('.strTC').each(function(){
     $(this).css('background-color',utils.stringToColor($(this).text()));
   })
+
+
+  $('body').on('click', 'a.openModal', function(e) {
+  	e.preventDefault()
+  	let modal = new app.ModalFW({
+  		name:'customModal-'+utils.uniqid(),
+  		url: this.href,
+  		blnAutodestroy: true
+  	}).open()
+  });
 });
 
 app.check403 = function(jqXHR, textStatus){
