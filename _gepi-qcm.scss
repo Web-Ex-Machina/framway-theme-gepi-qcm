@@ -15,3 +15,8 @@
   & li{display: inline-block;}
   & a{@include btn(); width: 100%; white-space: nowrap;}
 }
+
+.table-list__headline{font-size: 0.8em; opacity: 0.85;}
+tr.separator{ background: Hsl(from var(--primary) h s calc(l + 40)) !important; 
+  td{padding: .5em .75em !important; }
+}
