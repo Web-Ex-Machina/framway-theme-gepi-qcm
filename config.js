@@ -18,6 +18,23 @@ module.exports = {
 	'warning': 'colors(yellow)',
 	'error': 'colors(red)',
 
+
+	'body': {
+		'background': 'change-color(primary,$lightness:95%)',
+		// 'background': 'colors(greylighter)',
+		'block-background': 'change-color(primary,$lightness:99%)',
+	},
+	'header': {
+		'font-size': '0.85rem',
+	},
+	'container':{
+		'xl'  : '1320px', // 1320px
+		// 'lg'  : '960px', // 1140px
+		// 'md'  : '960px',
+		// 'sm'  : '720px',
+		// 'xs'  : '540px',
+		// 'xxs' : '100%',
+	},
 	'link': {
 		'font-color': 'colors(blueLogoFont)',
 	},
