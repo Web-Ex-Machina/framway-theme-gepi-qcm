@@ -39,6 +39,10 @@ label+input[type="file"]{opacity: 0; height: 0; width: 0;}
 }
 
 /* TABLE OUTPUT */
+.table_container{background: color(greylighter); padding: $spacing;
+  +.table_container{margin-top: $spacing;}
+}
+
 // .touch_button,
 // .close_menu,
 // .toggle_menu{ width: 60px; height: 60px; line-height: 60px; text-align: center; font-size: 1.5rem; -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;cursor: pointer; color: #ddd;}
