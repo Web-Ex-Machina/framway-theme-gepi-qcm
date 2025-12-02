@@ -43,6 +43,42 @@ label+input[type="file"]{opacity: 0; height: 0; width: 0;}
   +.table_container{margin-top: $spacing;}
 }
 
+// EXAM REQUEST
+%hidden-std{opacity: 0; visibility: hidden; transition: opacity 0.4s; pointer-events: none; height: 0; overflow: hidden;
+  &:after,&:before{visibility: hidden;}
+  &:not(.active){padding: 0; margin: 0;}
+  &.active{visibility: visible; opacity: 1; pointer-events: all; height: auto; overflow: visible;}
+}
+.mod_validate_requests,
+.mod_exam_request{
+  & .request_end{@extend %hidden-std;}
+  & .request_step{ @extend %hidden-std;
+    &.validate{pointer-events: none;}
+  }
+  & table.table{table-layout:auto; margin-bottom: 0;}
+  & .table td{vertical-align: middle;}
+}
+
+.candidat_select .select2-container{margin: 0;}
+.select2-container .select2-selection--single .select2-selection__rendered:after,
+span#select2-addExistingCandidate-container:after{content:"0"; color: transparent;}
+.candidat_select,.candidat_data{@extend %hidden-std;}
+.candidat_select .bd-right{
+  @include media-max(sm){border-color: transparent;}
+}
+.candidat_data .preview{max-width: 300px;
+  & .croppr-container{margin-bottom: $spacing;}
+}
+.preview:empty{display: none;}
+
+.mod_validate_requests,
+.mod_exam_request,
+.mod_validate_exams,
+.mod_exam_external_notations{
+  & .item>.infos{margin: 1rem 0;}
+}
+
+
 // .touch_button,
 // .close_menu,
 // .toggle_menu{ width: 60px; height: 60px; line-height: 60px; text-align: center; font-size: 1.5rem; -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;cursor: pointer; color: #ddd;}
