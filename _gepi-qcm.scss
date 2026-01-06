@@ -32,6 +32,7 @@ tr.separator{ background: Hsl(from var(--primary) h s calc(l + 40)) !important;
 
 //INPUTS
 label+input[type="file"]{opacity: 0; height: 0; width: 0;}
+button.disabled,*[disabled]{pointer-events: none}
 
 
 .titleWnav__wrapper{ display: flex; align-items: flex-end; justify-content: space-between; gap: 1em; margin-bottom: $spacing;
@@ -77,6 +78,72 @@ span#select2-addExistingCandidate-container:after{content:"0"; color: transparen
 .mod_exam_external_notations{
   & .item>.infos{margin: 1rem 0;}
 }
+
+.mod_exam_reader{
+  height: 100%;
+  // margin: -$spacing*2 0 ;
+  // @include media-max(xxs){margin: -$spacing/2 0;}
+  
+  .mod_article:has(&){
+    height: 100%;
+  }
+  
+  .slide{min-height: 100%; flex-direction:column;display:none; padding: $spacing/2 0;
+    & .slide__wrapper{flex-grow: 1; display: grid; grid-template-columns: 1fr; grid-template-rows: auto 1fr;}
+    &.active{display:flex;}
+    &.error .slide__wrapper{justify-content: flex-start;}
+
+    .image_container{text-align:right;}
+    .image_container img{max-width: none;min-width: 100%;}
+  }
+  .question{
+    margin-bottom: $spacing;
+    padding: 0;
+    .question__info{display: flex;}
+    .question__section{background: color(greylight); display: inline-block; padding:.35em 0.75em; align-content: center;}
+    .question__num{
+      background: var(--primary);
+      color: white;
+      font-weight: bold; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      line-height: 1;
+      padding: 15px;
+    }
+    .question__title{
+      font-weight: bold; 
+      font-size: 1.2em;
+      background: Hsl(from var(--primary) h s calc(l + 35)); 
+      padding: 0.75em;
+    }
+    .question__nbAnswers{display: inline-block; font-size: .65em; padding: .5em .5em; color: color(grey);}
+  }
+
+  .status {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    bottom: 0;
+    border-top: 1px solid black;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    z-index: 99;
+    padding: 1em 0;
+    &.active{opacity:1; visibility: visible;
+      &:hover{opacity: 1;}
+    }
+    & *{margin-bottom:0;}
+    & button{margin-left: 5px;
+      @include media-max(xxs){font-size: 0.8em; padding: .4em 1em .5em;}
+      &.disabled{opacity: 0.5;}
+    }
+  }
+}
+
 
 
 // .touch_button,
