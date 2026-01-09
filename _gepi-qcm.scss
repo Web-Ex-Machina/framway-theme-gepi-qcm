@@ -145,6 +145,28 @@ span#select2-addExistingCandidate-container:after{content:"0"; color: transparen
 }
 
 
+// EXAM EXTERNAL NOTATION
+.mod_exam_external_notation{
+  & table.table{ table-layout:auto;
+    & input,
+    & textarea,
+    & select,
+    & .select2-container{margin: 0;}
+    & input[name="candidatMCI"],
+    & input[name="candidatAC"],
+    & input[name="candidatTXP"],
+    & input[name="candidatAT"]{width: 60px; display: block; margin: auto;}
+    & tr{position: relative;}
+    & .action{position: absolute;width: 60px; height: 60px; top: 0; bottom: 0; margin: auto;
+      &.before{left: 100%;}
+      &.after{right: 100%;}
+    }
+  }
+  & ul>i{margin-left: -2em; margin-bottom: 0.5em; display: inline-block;}
+
+}
+.triggerComment{position: absolute; left: 100%; top: 0px; padding: 4px; cursor: pointer; z-index: 1;}
+
 
 // .touch_button,
 // .close_menu,
