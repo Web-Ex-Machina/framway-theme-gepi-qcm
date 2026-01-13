@@ -70,7 +70,9 @@ span#select2-addExistingCandidate-container:after{content:"0"; color: transparen
 .candidat_data .preview{max-width: 300px;
   & .croppr-container{margin-bottom: $spacing;}
 }
-.preview:empty{display: none;}
+.preview:empty{display: none;
+  +.rotate_preview{display: none;}
+}
 
 .mod_validate_requests,
 .mod_exam_request,
