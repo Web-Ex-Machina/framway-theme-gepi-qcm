@@ -24,6 +24,21 @@ $(function(){
   });
 });
 
+document.querySelectorAll('.headerFW li>a[class*=icon--],.headerFW li>strong[class*=icon--]').forEach((el)=>{
+	let FAclass = el.classList.value.match(/\bicon--[a-zA-Z-\--\_]*/gm)?.[0] || undefined;
+	if (FAclass) {
+		FAclass = FAclass.split('--')[1];
+		el.prepend(utils.getNodeFromString('<i class="'+FAclass.split('__').join(' ')+'"></i>'));
+	}
+})
+document.querySelectorAll('.block-card[class*=icon--]').forEach((el)=>{
+	let FAclass = el.classList.value.match(/\bicon--[a-zA-Z-\--\_]*/gm)?.[0] || undefined;
+	if (FAclass) {
+		FAclass = FAclass.split('--')[1];
+		el.querySelector('.block-card__figure').prepend(utils.getNodeFromString('<i class="'+FAclass.split('__').join(' ')+'"></i>'));
+	}
+})
+
 app.check403 = function(jqXHR, textStatus){
   if("timeout" == textStatus)
     notif_fade.error("Erreur de communication avec le serveur.");

@@ -25,6 +25,7 @@ module.exports = {
 		'block-background': 'change-color(primary,$lightness:99%)',
 	},
 	'header': {
+		'font-color': 'colors(blacklighter)',
 		'font-size': '0.85rem',
 	},
 	'container':{
