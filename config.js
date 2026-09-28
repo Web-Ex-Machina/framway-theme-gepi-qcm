@@ -1,11 +1,11 @@
 module.exports = {
 	'colors' : {
-		'blueLogo':     '#0d7cfe',
-		'blueLogoFont': '#0032b2',
+		'blueLogo':     '#0271CA',
+		'blueLogoFont': '#033B7B',
 		'redLogo':      '#ff0303',
 		'yellowLogo':   '#ffff00',
 		'green':        '#5cb85c',
-		'orange':       '#DC6053',
+		'orange':       '#F89700',
 	},
 
 	'griditem-minwidth': '28ch',
@@ -15,9 +15,10 @@ module.exports = {
 
 	'success': 'colors(green)',
 	'info': 'colors(blue)',
-	'warning': 'colors(yellow)',
+	'warning': 'colors(orange)',
 	'error': 'colors(red)',
 
+	'radius': '6px',
 
 	'body': {
 		'background': 'change-color(primary,$lightness:95%)',
@@ -27,6 +28,13 @@ module.exports = {
 	'header': {
 		'font-color': 'colors(blacklighter)',
 		'font-size': '0.85rem',
+	},
+	'input':{
+		'radius': 'radius'
+	},
+	'btn':{
+		'background': 'colors(blueLogoFont)',
+		'font-color': 'contrastFW(colors(white),colors(blueLogoFont))',
 	},
 	'container':{
 		'xl'  : '1320px', // 1320px
