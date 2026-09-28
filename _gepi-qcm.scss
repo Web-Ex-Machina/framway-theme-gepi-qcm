@@ -462,7 +462,7 @@ span#select2-addExistingCandidate-container:after{content:"0"; color: transparen
 }
 
 .filters{
-  >*{margin: 0;}
+  >*{margin: 0 !important;}
   gap: 1ch;
 }
 
