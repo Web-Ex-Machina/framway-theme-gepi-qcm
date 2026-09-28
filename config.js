@@ -15,7 +15,7 @@ module.exports = {
 
 	'success': 'colors(green)',
 	'info': 'colors(blue)',
-	'warning': 'colors(orange)',
+	'warning': 'colors(yellow)',
 	'error': 'colors(red)',
 
 	'radius': '6px',
